@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bar El Rincón</title>
   <style>
-    keyframes Appear {
+    html {
+      scroll-behavior: smooth;
+    }
+    @keyframes appear {
       from { 
         opacity: 0;
         scale: 0.5;
@@ -16,10 +19,11 @@
       }
     }
 
-    * {
-      animation: appear ease-in-out;
+    table, th, td, tr, h1, h2, h3, p, a, img, div, span, ul, li, header, section {
+      animation: appear linear;
       animation-timeline: view();
-      animation-range: entry 0 cover 40%;
+      animation-range: entry 0% cover
+      20%;
     }
 
     body {
@@ -91,6 +95,9 @@
       text-align: center;
       font-size: 2rem;
       margin-top: 2rem;
+      animation: appear ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0 cover 40%;
     }
     #Mapa {
       width: 100%;
